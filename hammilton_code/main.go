@@ -54,7 +54,7 @@ func binaryToAscii(binary []byte) {
 
 func chunkEvery(str string, n int) [][]byte {
 	bytes := []byte(str)
-	result := make([][]byte, len(str)/n)
+	result := make([][]byte, len(str)/n + len(str)%n)
 	for i := range result {
 		result[i] = make([]byte, n)
 	}
